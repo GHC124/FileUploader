@@ -5,11 +5,11 @@ public class LoginRequest extends Request{
 	private String username;
 	private String password;
 
-	public String getUsername() {
+	public String getAuthenUser() {
 		return username;
 	}
 
-	public void setUsername(String username) {
+	public void setAuthenUser(String username) {
 		this.username = username;
 	}
 

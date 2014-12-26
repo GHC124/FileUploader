@@ -23,9 +23,10 @@ public class AuthenticationRestController {
 		LoginResponse loginResponse = new LoginResponse();
 		
 		// TODO using database
-		if("chungpv1".equalsIgnoreCase(loginRequest.getUsername())
+		if("chungpv1".equalsIgnoreCase(loginRequest.getAuthenUser())
 				&& "123456".equalsIgnoreCase(loginRequest.getPassword())){
 			loginResponse.setStatus(Response.STATUS_SUCCESS);
+			loginResponse.setAuthenUser("chungpv1");
 			loginResponse.setDisplayName("Chung");
 			loginResponse.setTokenKey("123456789abc");
 		}else{
@@ -35,13 +36,13 @@ public class AuthenticationRestController {
 		return loginResponse;
 	}
 	
-	@RequestMapping(value = Endpoint.REST + ServiceUtil.VALIDATE, method = {RequestMethod.GET})
+	@RequestMapping(value = Endpoint.REST + ServiceUtil.VALIDATE, method = {RequestMethod.POST})
 	@ResponseBody
 	public Response validate(@RequestBody Request request){
 		ValidateResponse validateResponse = new ValidateResponse();
 		
 		// TODO using database and check time out
-		if("chungpv1".equalsIgnoreCase(request.getUsername())
+		if("chungpv1".equalsIgnoreCase(request.getAuthenUser())
 				&& "123456789abc".equalsIgnoreCase(request.getTokenKey())){
 			validateResponse.setStatus(Response.STATUS_SUCCESS);
 		}else{

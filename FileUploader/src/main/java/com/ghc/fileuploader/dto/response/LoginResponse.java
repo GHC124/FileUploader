@@ -5,6 +5,7 @@ public class LoginResponse extends Response {
 	public static final int ERROR_CODE_INVALID = 1;
 
 	private int errorCode;
+	private String authenUser;
 	private String tokenKey;
 	private String displayName;
 
@@ -14,6 +15,14 @@ public class LoginResponse extends Response {
 
 	public void setErrorCode(int errorCode) {
 		this.errorCode = errorCode;
+	}	
+	
+	public String getAuthenUser() {
+		return authenUser;
+	}
+
+	public void setAuthenUser(String authenUser) {
+		this.authenUser = authenUser;
 	}
 
 	public String getTokenKey() {

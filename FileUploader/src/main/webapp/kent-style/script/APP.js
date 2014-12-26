@@ -4,16 +4,17 @@ $(function() {
 });
 
 var page = new MainPage();
+page.init();
 
 function successHandler(response) {
 	if (response.status == 0) {
-		page.init(true);
+		page.setLogin(true);
 		page.setCurrentPage(Constants.PAGES.HOME_PAGE);
 	} else {
-		page.init(false);
+		page.setLogin(false);
 	}
 };
 
 function errorHandler(error) {
-	// Show login page
+	page.loginPage.init();
 };

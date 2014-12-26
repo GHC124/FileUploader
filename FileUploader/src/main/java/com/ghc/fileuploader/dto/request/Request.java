@@ -3,15 +3,15 @@ package com.ghc.fileuploader.dto.request;
 import com.ghc.fileuploader.dto.util.DtoUtil;
 
 public class Request {
-	private String username;
+	private String authenUser;
 	private String tokenKey;
 
-	public String getUsername() {
-		return username;
+	public String getAuthenUser() {
+		return authenUser;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setAuthenUser(String authenUser) {
+		this.authenUser = authenUser;
 	}
 
 	public String getTokenKey() {

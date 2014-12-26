@@ -3,7 +3,7 @@ function LoginPage() {
 };
 
 LoginPage.prototype.init = function() {
-	console.log('init:LoginPage');
+	log('init:LoginPage');
 	this.initContent();
 	return this;
 };
@@ -16,13 +16,13 @@ LoginPage.prototype.initContent = function() {
 		$(Constants.BODY).html(htmlText);
 		
 		// Binding event for login page
-		$(Constants.BODY).find("input[type=submit]").click(that.login);
+		$(Constants.BODY).find("input[type=button]").click(that.login);
 	});
 };
 
 LoginPage.prototype.successHandler = function(response) {
 	if (response.status == 0) {			
-		page.init(true);
+		page.setLogin(true);
 		page.setCurrentPage(Constants.PAGES.HOME_PAGE);
 	} else {
 		alert(response.message );
@@ -30,7 +30,7 @@ LoginPage.prototype.successHandler = function(response) {
 };
 
 LoginPage.prototype.errorHandler = function(error) {
-	alert(error);
+	alert('User not found!');
 };
 
 LoginPage.prototype.login = function() {

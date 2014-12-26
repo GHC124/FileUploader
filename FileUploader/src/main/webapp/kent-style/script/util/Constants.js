@@ -25,6 +25,6 @@ var Constants = {
 	SERVICE_VALIDATE: "validate",
 	
 	PAGES: {
-		HOME_PAGE: 1,
+		HOME_PAGE: 0,
 	}
 };

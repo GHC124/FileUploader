@@ -14,23 +14,22 @@ MainPage.prototype.footer = new Footer();
 MainPage.prototype.homePage = new HomePage();
 MainPage.prototype.loginPage = new LoginPage();
 
-MainPage.prototype.init = function(loggedin) {
-	console.log('init-MainPage');
+MainPage.prototype.init = function() {
+	log('init-MainPage');
+	
+	this._pages = new Array();	
+	this._pages.push(this.homePage);
+	
+	return this;
+};
+
+MainPage.prototype.setLogin = function(loggedin) {	
 	this.loggedin = loggedin;
-	
-	this.header.init(this.loggedin);
-	this.footer.init();
-	
-	if (this.loggedin) {
-		// show menu
-	} else {
+		
+	if (this.loggedin == false) {
 		// show login page
 		this.loginPage.init();
 	}
-	
-	this._pages = new Array();
-	
-	this._pages.push(this.homePage);
 	
 	return this;
 };
@@ -52,6 +51,8 @@ MainPage.prototype.setCurrentPage = function(pageId) {
 	if (this._currentPageId == pageId) {
 		return false;
 	}
+	
+	this._currentPageId = pageId;
 	
 	this._pages[pageId].init();
 };

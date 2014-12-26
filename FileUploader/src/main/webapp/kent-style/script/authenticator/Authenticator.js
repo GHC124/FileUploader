@@ -36,7 +36,7 @@ Authenticator.login = function(authenUser, password, successCallback, errorCallb
 		contentType: 'application/json',
 		success: function (response) {
 			if (response.status == 0) {
-				Cookie.createCookie(Constants.AUTHENUSER, response.username, 1);
+				Cookie.createCookie(Constants.AUTHENUSER, response.authenUser, 1);
 				Cookie.createCookie(Constants.TOKENKEY, response.tokenKey, 1);
 				if (typeof successCallback !== "undefined") {
 					successCallback(response);
