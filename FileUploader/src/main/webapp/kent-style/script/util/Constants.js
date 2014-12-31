@@ -15,7 +15,7 @@ var Constants = {
 	FOOTER_BAR: "#footer-bar",
 	FOOTER_BAR_FOOTER: "#footer",
 	
-	SERVER_HOST: "http://localhost:8089/fileuploader/rest",
+	SERVER_HOST: "http://localhost:8088/fileuploader/rest",
 	
 	AUTHENUSER: "username",
 	TOKENKEY: "tokenKey",

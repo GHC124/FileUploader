@@ -16,7 +16,7 @@ LoginPage.prototype.initContent = function() {
 		$(Constants.BODY).html(htmlText);
 		
 		// Binding event for login page
-		$(Constants.BODY).find("input[type=button]").click(that.login);
+		$(Constants.BODY).find("button[type=button]").click(that.login);
 	});
 };
 
