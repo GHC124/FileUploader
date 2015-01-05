@@ -15,7 +15,7 @@ var Constants = {
 	FOOTER_BAR: "#footer-bar",
 	FOOTER_BAR_FOOTER: "#footer",
 	
-	SERVER_HOST: "http://localhost:8088/fileuploader/rest",
+	SERVER_HOST: "http://localhost:8089/fileuploader/rest",
 	
 	AUTHENUSER: "username",
 	TOKENKEY: "tokenKey",
@@ -23,8 +23,10 @@ var Constants = {
 	/** SERVICES **/	
 	SERVICE_LOGIN: "login",
 	SERVICE_VALIDATE: "validate",
+	SERVICE_FILE_UPLOAD: "file/upload",
 	
 	PAGES: {
 		HOME_PAGE: 0,
+		UPLOAD_PAGE: 1,
 	}
 };

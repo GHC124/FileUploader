@@ -4,6 +4,7 @@ function LoginPage() {
 
 LoginPage.prototype.init = function() {
 	log('init:LoginPage');
+	page._currentPageId = null;
 	this.initContent();
 	return this;
 };

@@ -42,5 +42,8 @@
 	
 	<!-- Configure Aspect Beans, without this Aspects advices wont execute -->
 	<beans:bean name="loggingAspect" class="com.ghc.fileuploader.aspect.logging.LoggingAspect" />
-	
+			
+	<beans:bean 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" 
+		id="multipartResolver"/> 	
 </beans:beans>

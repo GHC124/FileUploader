@@ -1,1 +1,6 @@
-#login{width: 450px;}
+#header-bar{height:150px;}
+#header{height:110px;}
+#user-control{position:relative;top:-130px;left:1000px;}
+#login{width:450px;}
+#navigator{height:25px;background:rgb(240, 240, 240);}
+.jumbotron{padding: 20px !important;}

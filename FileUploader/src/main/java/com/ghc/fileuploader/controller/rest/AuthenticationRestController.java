@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ghc.fileuploader.aspect.logging.Loggable;
 import com.ghc.fileuploader.controller.util.Endpoint;
 import com.ghc.fileuploader.dto.request.LoginRequest;
 import com.ghc.fileuploader.dto.request.Request;
@@ -16,7 +15,6 @@ import com.ghc.fileuploader.dto.response.ValidateResponse;
 import com.ghc.fileuploader.service.util.ServiceUtil;
 
 @Controller
-@Loggable
 public class AuthenticationRestController {
 	
 	@RequestMapping(value = Endpoint.REST + ServiceUtil.LOGIN, method = {RequestMethod.POST})
